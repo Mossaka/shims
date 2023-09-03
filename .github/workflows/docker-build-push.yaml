@@ -25,8 +25,8 @@ jobs:
             context: images/spin-outbound-redis
           - imageName: examples/lunatic-rust-hello
             context: images/lunatic
-          - imageName: examples/lunatic-spawn-process
-            context: images/lunatic-spawn-process
+          - imageName: examples/lunatic-spawn
+            context: images/lunatic-spawn
           - imageName: examples/lunatic-submillisecond
             context: images/lunatic-submillisecond
     steps:
