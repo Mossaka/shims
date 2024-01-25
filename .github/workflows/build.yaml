@@ -66,9 +66,9 @@ jobs:
 
           cd _dist
           cosign sign-blob --yes \
-            --output-certificate containerd-shim-${{ needs.parse.outputs.runtime }}-${{ matrix.shims.version }}-crt.pem \
-            --output-signature containerd-shim-${{ needs.parse.outputs.runtime }}-${{ matrix.shims.version }}.sig \
-            containerd-shim-${{ needs.parse.outputs.runtime }}-${{ matrix.shims.version }}
+            --output-certificate containerd-shim-${{ matrix.shims.name }}-${{ matrix.shims.version }}-crt.pem \
+            --output-signature containerd-shim-${{ matrix.shims.name }}-${{ matrix.shims.version }}.sig \
+            containerd-shim-${{ matrix.shims.name }}-${{ matrix.shims.version }}
       - name: lowercase the runner OS name
         shell: bash
         run: |
