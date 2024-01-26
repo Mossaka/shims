@@ -77,7 +77,7 @@ jobs:
       - name: package release assets
         run: |
           cd _dist
-          tar czf containerd-wasm-shims-${{ matrix.shims.version }}-${{ matrix.shims.name }}-${{ env.RUNNER_OS }}-${{ matrix.config.arch }}.tar.gz containerd-shim-*-${{ matrix.shims.version }}
+          tar czf containerd-wasm-shims-${{ matrix.shims.version }}-${{ matrix.shims.name }}-${{ env.RUNNER_OS }}-${{ matrix.config.arch }}.tar.gz .
       - name: upload shim artifacts
         uses: actions/upload-artifact@v3
         with:
