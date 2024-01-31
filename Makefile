@@ -45,10 +45,10 @@ workloads:
 
 .PHONY: integration-tests
 integration-tests: install-cross check-bins move-bins up pod-status-check workloads
-	cargo test -- --nocapture
+	cross test --release -- --nocapture
 
 .PHONY: tests/clean
-test/clean:
+tests/clean:
 	./scripts/down.sh
 
 .PHONY: fmt
